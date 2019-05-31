@@ -127,7 +127,7 @@ class KeyVaultAgent(object):
 
         secret.metadata = client.V1ObjectMeta(name=key)
         secret.type = "Opaque"
-        secret.data = { "secret" : encoded_secret }
+        secret.data = { "value" : encoded_secret }
 
         secrets_list = self._get_kubernetes_secrets_list()
 
